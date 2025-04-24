@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetSphere</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preload" href="assets/nav_logo.webp" as="image">
+    <link rel="preload" href="assets/hero_image.webp" as="image">
+    <link rel="preload" href="assets/dog_food.webp" as="image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img src="assets/nav_logo2.webp" alt="Logo" class="logo">
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <!-- <li><a href="#vet">Vet</a></li> -->
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="cart.html">Cart <i class="fas fa-shopping-cart"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="floating-cart">
+        <a href="cart.html" class="cart-fab">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+        </a>
+    </div>
+
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>YOUR PET'S <span class="highlight">PARADISE</span> AWAITS</h1>
+            <p class="hero-subtitle">Experience Premium Pet Care Like Never Before</p>
+            <div class="hero-features">
+                <div class="feature" onclick="window.location.href='shop.html'">
+                    <i class="fas fa-paw"></i>
+                    <span>PREMIUM PRODUCTS</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-heart"></i>
+                    <span>EXPERT CARE</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-truck"></i>
+                    <span>FAST DELIVERY</span>
+                </div>
+            </div>
+            <div class="hero-buttons">
+                <button class="primary-btn" onclick="scrollToFeaturedProducts()">EXPLORE NOW <i class="fas fa-arrow-right"></i></button>
+                <button class="secondary-btn">LEARN MORE <i class="fas fa-chevron-down"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-products" id="featured-products">
+        <div class="section-header">
+            <h2>Featured Products</h2>
+            <p class="section-subtitle">Discover our premium selection of pet care products</p>
+        </div>
+       <div class="product-grid">
+            <div class="product-card"
+                onclick="openPopup('Dog Food - 1', '₹2499', `🐾 Premium Dog Food for a Happy, Healthy Pup
+                Fuel your furry friend with nutrition they deserve.
+                
+                Introducing TailWag Delights – a wholesome blend of natural ingredients tailored to meet your dog's daily needs. Whether your pup is a playful puppy or a wise old tail-wagger, our formula supports:
+                
+                ✅ Healthy Digestion with added prebiotics and fiber
+                ✅ Strong Muscles & Joints with real chicken, lamb, or salmon protein
+                ✅ Shiny Coat & Skin thanks to omega-3 & 6 fatty acids
+                ✅ Boosted Immunity from vitamins, minerals, and antioxidants
+                
+                No fillers. No artificial colors. Just real food made with love.
+                
+                🌾 Grain-free options available for sensitive tummies
+                🍗 Made with real meat as the #1 ingredient
+                🧪 Vet-approved and backed by science
+                
+                Because your dog isn’t just a pet—they’re family.`, 'assets/dog_food.webp')">
+                <img src="assets/dog_food.webp" alt="Dog Food - 1">
+                <h3>Dog Food - 1</h3>
+                <p class="price">₹2499</p>
+            </div>
+            <div class="product-card"
+                onclick="openPopup('Dog Food - 2', '₹2499', 'Premium quality dog food with balanced nutrition for your pet.', 'assets/dog_food.webp')">
+                <img src="assets/dog_food.webp" alt="Dog Food - 2">
+                <h3>Dog Food - 2</h3>
+                <p class="price">₹2499</p>
+            </div>
+            <div class="product-card"
+                onclick="openPopup('Dog Food - 3', '₹2499', 'Specially formulated dog food for optimal health and energy.', 'assets/dog_food.webp')">
+                <img src="assets/dog_food.webp" alt="Dog Food - 3">
+                <h3>Dog Food - 3</h3>
+                <p class="price">₹2499</p>
+            </div>
+            <div class="product-card"
+                onclick="openPopup('Dog Food - 4', '₹2499', 'Nutritious dog food with essential vitamins and minerals.', 'assets/dog_food.webp')">
+                <img src="assets/dog_food.webp" alt="Dog Food - 4">
+                <h3>Dog Food - 4</h3>
+                <p class="price">₹2499</p>
+            </div>
+            <div class="product-card"
+                onclick="openPopup('Dog Food - 5', '₹2499', 'High-protein dog food for active and growing pets.', 'assets/dog_food.webp')">
+                <img src="assets/dog_food.webp" alt="Dog Food - 5">
+                <h3>Dog Food - 5</h3>
+                <p class="price">₹2499</p>
+            </div>
+            <div class="product-card"
+                onclick="openPopup('Dog Food - 6', '₹2499', 'Grain-free dog food for sensitive stomachs.', 'assets/dog_food.webp')">
+                <img src="assets/dog_food.webp" alt="Dog Food - 6">
+                <h3>Dog Food - 6</h3>
+                <p class="price">₹2499</p>
+            </div>
+            <div class="product-card"
+                onclick="openPopup('Dog Food - 7', '₹2499', 'Organic dog food made with natural ingredients.', 'assets/dog_food.webp')">
+                <img src="assets/dog_food.webp" alt="Dog Food - 7">
+                <h3>Dog Food - 7</h3>
+                <p class="price">₹2499</p>
+            </div>
+            <div class="product-card"
+                onclick="openPopup('Dog Food - 8', '₹2499', 'Veterinarian recommended dog food for all breeds.', 'assets/dog_food.webp')">
+                <img src="assets/dog_food.webp" alt="Dog Food - 8">
+                <h3>Dog Food - 8</h3>
+                <p class="price">₹2499</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="product-popup" class="popup">
+        <div class="popup-content">
+            <img id="popup-image" src="" alt="Product Image" class="product-image">
+            <div class="product-details">
+                <h2 id="product-title">Product Name</h2>
+                <p id="product-price">Price</p>
+                <p id="product-description">Description</p>
+                <div class="quantity-selector">
+                    <button id="decrease-quantity" onclick="changeQuantity(-1)">-</button>
+                    <input type="number" id="quantity" value="1" min="1" readonly>
+                    <button id="increase-quantity" onclick="changeQuantity(1)">+</button>
+                </div>
+                <div class="button-container">
+                    <button id="add-to-cart">Add to Cart</button>
+                    <button id="close-popup" onclick="closePopup()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <footer>
+        <div class="footer-section">
+            <h4>Contact</h4>
+            <p><b>Address:</b> Manav Rachna University</p>
+            <p><b>Phone:</b> +91 5555555555</p>
+            <p><b>Hours:</b> 10:00 AM - 08:00 PM, Mon - Sat</p>
+        </div>
+        <div class="footer-section">
+            <h4>About</h4>
+            <p><a href="#">About Us</a></p>
+            <p><a href="#">Delivery Information</a></p>
+            <p><a href="#">Privacy Policy</a></p>
+            <p><a href="#">Terms & Conditions</a></p>
+            <p><a href="#">Contact Us</a></p>
+        </div>
+        <div class="footer-section">
+            <h4>My Account</h4>
+            <p><a href="#">Sign In</a></p>
+            <p><a href="#">View Cart</a></p>
+            <p><a href="#">My Wishlist</a></p>
+            <p><a href="#">Track My Order</a></p>
+            <p><a href="#">Help</a></p>
+        </div>
+        <div class="footer-section">
+            <h4>Install App</h4>
+            <p><b>From App Store or Google Play</b></p>
+            <div class="app-images">
+                <img src="assets/app.webp" alt="App Store" />
+                <img src="assets/play.webp" alt="Google Play" />
+            </div>
+            <p><b>Secured Payment Gateways</b></p>
+            <img src="assets/pay.webp" alt="Payment Gateways" class="payment-gateway-image" />
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
